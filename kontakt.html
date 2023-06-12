@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <title>Začetna stran</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="eNSA, spletišče, website, kreiranje spletišča, spletno mesto, Bootstrap">
+    <meta name="description" content="Izdelava in oblikovanje lastne spletne strani.">
+    <meta name="author" content="eNSA, Bolte Erik">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="slike/Logotip.ico" type="image/x-icon">
+    <link rel="stylesheet" href="slog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body class="world">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#meni">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                <a class="navbar-brand" href="index.html"><img class="MyLogo" src="slike/Bolte.jpg" alt="eNSA logotip"></a>
+                </div>			
+                <div class="collapse navbar-collapse" id="meni">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Domov</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Photoshop izdelki<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="dokument/risbe.html">Risbe</a></li>
+                                <li><a href="dokument/manipulacija.html">Foto manipulacija</a></li>
+                                <li><a href="dokument/lepota.html">Lepota photoshopa</a></li>
+                                <li><a href="dokument/nadrealisticno.html">Nadrealistična umetnost</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Posnetki iger<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="dokument/akcija.html">Akcijske igre</a></li>
+                                <li><a href="dokument/pustolovscina.html">Pustolovske igre</a></li>
+                                <li><a href="dokument/dirke.html">Dirkalne igre</a></li>
+                                <li><a href="dokument/retro.html">Retro igre</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="cinema.html">Cinema 4D</a></li></li>
+                        <li><a href="osebno.html">Osebni projekti</a></li>
+                        <li class="active"><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>		
+        </nav>
+    </header>
+    <section id="service">
+		<h1 class="contact">STOPITE V STIK</h1>
+		<div>
+			<form id="input">
+				<input class="input" type="text" name="firstname" placeholder="IME*" required><br>
+                <input class="input" type="text" name="lastname" placeholder="PRIIMEK*" required><br>
+				<input class="input" type="email" name="email" placeholder="EMAIL*" required><br>
+				<input class="input" type="text" name="phone" placeholder="TELEFON"><br>
+				<textarea name="subject" placeholder="SPOROČILO"></textarea><br><br>
+                <label class="checkbox">
+                    <input class="check" type="checkbox" name="check" required>Strinjam se s splošnimi pogoji!<br>
+                </label>
+                <button class="button" type="submit" value="Submit">Submit</button>
+                <button class="button" type="reset" value="Reset">Reset</button>
+			</form>
+		</div>
+	</section>
+    <div id="zemljevid">
+        <div class="container-fluid">
+            <div id="map"></div>
+        </div>
+    </div>
+    <script>
+    function myMap() {
+        var myCenter = new google.maps.LatLng(46.250623,14.348762);
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: myCenter, zoom: 15};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
+  
+        var infowindow = new google.maps.InfoWindow({
+        content: "<b>Bolte, Spletišče</b><br>eNSA<br>Kidričeva 55<br>4000 Kranj"
+        });
+        infowindow.open(map,marker);
+    }
+    </script>  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNwS87CPSATXb_nkhTmN5-VxgLBuMbW3I&callback=myMap"></script>
+    <footer style="margin: 0;" class="media">
+        <div>
+          <div>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
+            <span class="copy">© Lastna vaja, Erik Bolte</span>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>

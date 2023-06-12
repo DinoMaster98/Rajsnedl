@@ -1,0 +1,731 @@
+/* Pisava, velikost in barva naslovov */
+body { 
+   font-family: Roboto, Helvetica, Arial, sans-serif; 
+   background-color: white; 
+   min-width: 400px;
+}
+p {
+   font-size: 1.15em;
+}
+.text {
+   font-size: 1.35em;
+}
+
+/* Ozadje za kontakt */
+.world {
+   background-image: url('slike/world.jpg');
+   background-size: cover;
+}
+
+/* Naslovi */
+h1 { 
+   color: orange;
+   padding: 120px 0 0 100px;
+   font-size: 500%;
+   transition: all 1s;
+}
+h2 { 
+   color: orange; 
+   font-size: 2em; 
+   font-weight: bold;
+}
+h3 { 
+   color: rgba(85,61,123,0.80); 
+   font-size: 3em;
+   font-weight: bold;
+}
+h4 { 
+   color: rgba(85,61,123,0.80); 
+   font-size: 1.8em;
+}
+
+/* Oblikovne lastnosti za glavne naslove */
+#naslov {
+   font-size: 600%;
+   text-align: center;
+   padding: 0 0 10px 0;
+   border-bottom: 3px orange solid;
+}
+
+/* Centriranje določenih elementov */
+.center {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: block;
+   width: 50%;
+   margin: auto;
+}
+
+/* Izgled nekaterih elementov */
+.columns {
+   column-count: 2;
+   width: 55%;
+   margin: auto;
+   padding: 20px;
+   column-rule: 1px solid gray;
+}
+
+/* okvir <header>: Logotip in navigacija */
+.navbar {
+   margin-bottom: 0;
+   border-radius: 0;
+   background-color: #fff;
+   color: #222;
+   border: 0;
+   font-size: 1.2em;
+}
+
+/* Oblikovne lastnosti ikone menija */
+.navbar-inverse .navbar-toggle {
+   border-color: #aaa;
+   background-color: #aaa;
+   margin-top: 30px;
+}
+.navbar-inverse .navbar-toggle:focus, 
+.navbar-inverse .navbar-toggle:hover {
+   border-color: #666;
+   background-color: #666;
+}
+/* Oblikovne lastnosti logotipa */
+.navbar-brand {
+   float: left;
+   min-height: 85px;
+   padding: 5px 0 0 25px;
+}
+.MyLogo {
+   width: 130px;
+   height: 80px;
+}
+/* Oblikovne lastnosti navigacije */
+.navbar-inverse .navbar-nav { margin-top: 40px; }
+.navbar-inverse .navbar-nav .active a,
+.navbar-inverse .navbar-nav .active a:focus,
+.navbar-inverse .navbar-nav .active a:hover {
+   color: #000;
+   background-color: #fff;
+}
+.navbar-inverse .navbar-nav li a {
+   color: #999;
+   padding: 3px 5px;
+}
+.navbar-inverse .navbar-nav li a:hover { color: #333; }
+
+/* Prva stran slike */
+.imageSection {
+   position: relative;
+   background-color: black;
+   width: 100%;
+   height: 640px;
+   transition: all 1s;
+}
+.image {
+   width: 800px;
+   height: 60%;
+   border: 1px solid white;
+   transition: all 1s;
+}
+/* Izgled slik v črnem okvirju */
+.first {
+   position: absolute;
+   right: 30px;
+   top: 200px;
+   z-index: 2;
+}
+.op {
+   opacity: 0.8;
+}
+.second {
+   position: absolute;
+   right: 60px;
+   top: 60px;
+   z-index: 1;
+}
+/* Izgled slik izven okvirja za primerjavo */
+.smallImage {
+   width: 300px;
+   height: 40%;
+   border: 1px solid white;
+   transition: all 1s;
+}
+.third {
+   position: absolute;
+   left: 500px;
+   top: 80px;
+}
+.fourth {
+   position: absolute;
+   left: 380px;
+   top: 340px;
+}
+.fifth {
+   position: absolute;
+   left: 700px;
+   top: 340px;
+}
+.pictures {
+   text-align: center;
+}
+.pic {
+   width: 80%;
+}
+.column {
+   column-count: 3;
+}
+
+/* Noga strani */
+footer a {
+   color: white;
+}
+
+/* Izgled za stran "kontakt" */
+.media {
+   background-color: gray;
+   text-align: center;
+   color: white;
+   padding: 20px;
+}
+.copy {
+   padding-left: 20px;
+   font-size: 1.2em;
+}
+.contact {
+   text-align: center;
+   padding: 120px 0 0 0;
+}
+#service {
+   text-align: center;
+   margin: auto;
+   width: 45%;
+}
+#input {
+   column-count: 2;
+}
+.checkbox {
+   color: white;
+   font-size: 18px;
+}
+.check {
+   height: 15px;
+   width: 20px;
+   margin: 10px;
+}
+.input {
+   width: 400px;
+   height: 50px;
+   border: none;
+   border: 1px solid black;
+   border-radius: 5px;
+   margin: 10px;
+   padding: 0 0 0 10px;
+}
+textarea {
+   resize: none;
+   width: 400px;
+   height: 320px;
+   float: right;
+   padding: 10px 0 0 10px;
+}
+/* Gumbi na kontakt strani */
+.button {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 20px;
+   background-color: white;
+   width: 100px;
+   height: 50px;
+   border: 1px solid black;
+   border-radius: 5px;
+   transition: 1s all;
+   margin: 10px 0;
+}
+.button:hover {
+   background-color: black;
+   color: white;
+   transition: 1s all;
+}
+/* Kontakt: api zemljevid */
+#zemljevid .container-fluid {
+   background-color: #efefef;
+   width: 100%;
+   padding: 0;
+   margin: 30px 0 0 0;
+}
+#zemljevid #map {
+   width: 100%;
+   height: 500px;	
+}
+
+/* Izgled slik na strani "Osebni projekti" */
+.image-gallery {
+   margin: auto; 
+   text-align: center; 
+   column-count: 2; 
+   min-width: 50%;
+   max-width: 50%;
+   min-height: 800px;
+}
+div.gallery {
+   display: inline-block;
+   margin: 10px;
+   border: 1px solid #ccc;
+   width: 180px;
+}
+div.gallery:hover {
+   border: 1px solid #777;
+}
+div.gallery img {
+   width: 100%;
+   height: 200px;
+}
+div.desc {
+   padding: 15px;
+   text-align: center;
+}
+/* Tabela s podatki izdelkov na strani "Osebni projekti" */
+.content-table {
+   border-collapse: collapse;
+   margin: 25px 0;
+   font-size: 0.9em;
+   min-width: 400px;
+   border-radius: 5px 5px 0 0;
+   overflow: hidden;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr {
+   background-color: orange;
+   color: #ffffff;
+   text-align: left;
+   font-weight: bold;
+}
+.content-table th, .content-table td {
+   padding: 12px 15px;
+}
+.content-table tbody tr {
+   border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type {
+   border-bottom: 2px solid orange;
+}
+.content-table tbody tr.active-row {
+   font-weight: bold;
+   color: orange;
+}
+
+.container {
+   display: flex;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+/* Menijska vrstica za povezave do poglavij */
+.sidebar {
+   padding: 20px;
+   min-width: 200px;
+}
+.sidebar ul {
+   font-size: 20px;
+   list-style-type: none;
+   padding: 0;
+   border: 2px solid gray;
+   border-radius: 5px;
+}
+.sidebar ul li {
+   margin: 10px;
+}
+.sidebar ul li a {
+   text-decoration: none;
+   color: #333;
+   display: block;
+   padding: 5px 10px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+.sidebar ul li a:hover {
+   background-color: #ddd;
+}
+/* Oblikovna lastnost za opis tem */
+.opis {
+   padding: 20px;
+   margin: 20px auto;
+   max-width: 800px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.opis h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+.opis p {
+   font-size: 16px;
+   color: #666;
+}
+/* Pozicija in izgled galerije slik na "Risbe" */
+.galerija {
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.risba {
+   margin: 10px;
+   padding: 10px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+   border-radius: 5px;
+   overflow: hidden;
+   width: 250px;
+   transition: all 0.3s ease;
+}
+/* Izgled elementa ko je miška nad sliko */
+.risba:hover {
+   background-color: #FCAE1E;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   transform: scale(1.5, 1.5);
+   transition: all 0.3s;
+}
+.risba img {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+/* Izgled vrtiljaka slik */
+.carousel {
+   width: 100%;
+   height: 300px; 
+   position: relative;
+   overflow: hidden;
+}
+.slides-container {
+   width: 500%;
+   height: 100%;
+   display: flex;
+}
+.slide {
+   flex: 0 0 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+.slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+/* Položaj pik za vrtiljak */
+.dots-container {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+/* Izgled pik */
+.dot {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: #bbb;
+   margin: 0 5px;
+   cursor: pointer;
+}
+.dot.active {
+   background-color: #333;
+}
+section h3 {
+   margin: 20px auto;
+   max-width: 70%;
+}
+section p {
+   margin: 20px auto;
+   max-width: 70%;
+}
+
+/* Prikaz slik v šestkotni obliki galerije */
+.hexagon-section {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   display: grid;
+   place-items: center;
+   min-height: 80vh;
+   overflow: hidden;
+}
+.hexagon-gallery {
+   position: relative;
+   width: 492px;
+   height: 454px;
+   display: grid;
+   place-items: center;
+}
+.hexagon-gallery .hexagon {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   filter: drop-shadow(2px 2px 5px) saturate(2);
+}
+.hexagon-gallery .hexagon .hex {
+   width: 144px;
+   height: 159px;
+   display: flex;
+   margin: 10px;
+   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+/* Položaj slik */
+.hexagon-gallery .hexagon:nth-child(1) {
+   top: 0;
+}
+.hexagon-gallery .hexagon:nth-child(3) {
+   bottom: 0;
+}
+.hexagon-gallery .hexagon .hex img {
+   filter: brightness(.5);
+   width: 100%;
+   object-fit: cover;
+   transition: .3s;
+}
+.hexagon-gallery .hexagon .hex:hover img {
+   transform: scale(1.1);
+   filter: brightness(1);
+}
+
+/* Pozicioniranje slik */
+.grid {
+   width: 100%;
+   max-width: 60rem;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.grid-block {
+   width: 50%;
+   min-height: 11.25rem;
+   padding: 1rem;
+}
+.image-grid {
+   -webkit-transform: rotateX(45deg) rotateZ(45deg);
+   transform: rotateX(45deg) rotateZ(45deg);
+   -webkit-perspective: 1000px;
+   perspective: 1000px;
+}
+.image-grid .tile-link:hover .tile-img {
+   top: -1rem;
+   left: -1rem;
+}
+.image-grid .tile-img {
+   position: relative;
+   top: 0;
+   left: 0;
+   -webkit-transition-property: opacity, top, left, box-shadow;
+   transition-property: opacity, top, left, box-shadow;
+}
+.tile-link {
+   display: block;
+}
+.tile-link:hover .tile-img {
+   opacity: 1;
+} 
+.tile-link:hover .tile-img-link {
+   display: block;
+}
+.tile-link:hover .tile-img-link:hover .tile-img {
+   opacity: 0.5;
+}
+.tile-img {
+   display: block;
+   width: 100%;
+   height: auto;
+   opacity: 1;
+   -webkit-transition-property: opacity;
+   transition-property: opacity;
+   -webkit-transition-duration: 0.125s;
+   transition-duration: 0.125s;
+   -webkit-transition-timing-function: ease-in;
+   transition-timing-function: ease-in;
+}
+.tile-link:hover .tile-img2 {
+   box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
+     15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
+     25px 25px rgba(45, 186, 233, 0.05);
+}
+
+/* Tabela za akcijske igre */
+.action-table {
+   border-collapse: collapse;
+   font-family: Arial, sans-serif;
+   background-color: rgb(34, 32, 32);
+   border: 2px solid black;
+}
+.action-table th, .action-table td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: left;
+   transition: all 1s;
+}
+.action-table th {
+   background-color: #f2f2f2;
+}
+.action-table td {
+   color: #ddd
+}
+.action-table img {
+   max-width: 150px;
+   max-height: 150px;
+   margin: 0 auto;
+   transition: all 1s;
+}
+
+/* Zmožnost Responsive web */
+@media (max-width: 767px) {
+   .navbar-inverse .navbar-nav {
+      margin-top: 5px;
+      padding-left: 25px;
+   }
+}
+
+@media (max-width: 1890px ){
+   .smallImage {
+      width: 280px;
+      height: 30%;
+      transition: all 1.5s;
+   }
+   .third {
+      left: 280px;
+      top: 15px;
+      transition: all 1.5s;
+   }
+   .fourth {
+      left: 280px;
+      top: 222px;
+      transition: all 1.5s;
+   }
+   .fifth {
+      left: 280px;
+      top: 430px;
+      transition: all 1.5s;
+   }
+}
+
+@media (max-width: 1810px) {
+   #service {
+      text-align: center;
+      margin: auto;
+      width: 100%;
+   }
+   #input {
+      column-count: 1;
+   }
+   textarea {
+      resize: none;
+      width: 400px;
+      height: 400px;
+      float: none;
+      padding: 10px 0 0 10px;
+   }
+}
+
+@media (max-width: 1530px) {
+   .smallImage {
+      opacity: 0;
+      transition: all 1.5s;
+   }
+}
+
+@media (max-width: 1200px) {
+   .header1 {
+      opacity: 0;
+      transition: all 1s;
+   }
+}
+
+@media (max-width: 990px) {
+   .header1 {
+      display: none;
+   }
+   .smallImage {
+      display: none;
+   }
+   .image {
+      width: 720px;
+      height: 60%;
+   }
+}
+
+@media (max-width: 750px) {
+   .imageSection {
+      height: 500px;
+   }
+   .image {
+      width: 450px;
+      height: 40%;
+   }
+   .first {
+      top: 250px;
+   }
+   .second {
+      top: 50px;
+   }
+   .column {
+      column-count: 1;
+   }
+   .columns {
+      column-count: 1;
+   }
+   .image-gallery {
+      column-count: 1;
+   }
+   .header4 {
+      padding: 0px 30px 20px 30px;
+      font-size: 2.2em;
+   }
+   .world {
+      background-image: none;
+      background-color: #484848;
+   }
+}
+
+@media (max-width: 400px) {
+   .image {
+      width: 350px;
+      height: 35%;
+   }
+   .first {
+      top: 260px;
+      left: 25px;
+   }
+   .second {
+      top: 60px;
+      left: 25px;
+   }
+   .input {
+      width: 350px;
+   }
+   textarea {
+      width: 350px;
+   }
+   .sidebar {
+      display: none;
+   }
+   #naslov {
+      font-size: 400%;
+   }
+   .hexagon-section {
+      height: 100px;
+      width: 450px;
+   }
+   .hexagon-gallery {
+      height: 320px;
+      width: 100px;
+   }
+   .hexagon-gallery .hexagon .hex {
+      width: 100px;
+      height: 115px;
+   }
+}
